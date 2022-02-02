@@ -1,15 +1,6 @@
 <template>
   <main class="container">
-    <header class="header d-flex flex-column">
-      <div class="links">
-        <nuxt-link to="/" class="button--green"> Home </nuxt-link>
-
-        <nuxt-link to="/news/" class="button--green"> News </nuxt-link>
-        <nuxt-link to="/about/" class="button--green"> About </nuxt-link>
-      </div>
-
-      <h1 class="title">Home</h1>
-    </header>
+    <h1 class="title">Home</h1>
     <section class="row">
       <div class="card-columns">
         <div v-for="post in currentPage" :key="post.id" class="card">
