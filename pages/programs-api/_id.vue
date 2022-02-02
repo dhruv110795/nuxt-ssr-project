@@ -1,3 +1,4 @@
+
 <template>
   <div>
     <div v-if="$fetchState.pending">
@@ -11,9 +12,10 @@
     </div>
     <div v-else>
       <h1>{{ this.$route.params.id }}</h1>
-      <div>{{ filteredProgs }}</div>
+      <div>{{ data.length }}</div>
+        <nuxt-link to="/programs-api">back to list</nuxt-link>
+      <div>{{ data }}</div>
     </div>
-    <nuxt-link to="/programs-api">back to list</nuxt-link>
   </div>
 </template>
 <script>
@@ -26,16 +28,12 @@ export default {
   },
   async fetch() {
     const data = await this.$http.$get(
-      'https://cms.asuonline.asu.edu/lead-submissions-v3.5/programs',
+      'https://cms.asuonline.asu.edu/lead-submissions-v3.5/programs?category='+this.$route.params.id,
       {
         headers: { Accept: 'application/json' },
       }
     )
-    const filteredProgs = data.filter(
-      (progs) => progs.category === this.$route.params.id
-    )
-    console.log(filteredProgs.length)
-    return { filteredProgs, data }
+    this.data = data
   },
 }
 </script>
