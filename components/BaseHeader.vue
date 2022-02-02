@@ -5,8 +5,11 @@
         <nuxt-link to="/" class="button--green p-2"> Home </nuxt-link>
 
         <nuxt-link to="/news/" class="button--green p-2"> News </nuxt-link>
-        <nuxt-link to="/programs-api/" class="button--green p-2"> Programs-API </nuxt-link>
+        <nuxt-link to="/programs-api/" class="button--green p-2">
+          Programs-API
+        </nuxt-link>
         <nuxt-link to="/json/" class="button--green p-2"> JSON </nuxt-link>
+        <nuxt-link to="/vuex/" class="button--green p-2"> Vuex </nuxt-link>
       </div>
     </header>
   </main>
