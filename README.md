@@ -1,5 +1,8 @@
 # nuxt-ssr-project
 
+## HeroKu 
+https://nuxt-ssr-project.herokuapp.com/
+
 ## Build Setup
 
 ```bash
